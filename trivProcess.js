@@ -24,6 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Function to check answers and calculate score
+
+    /**
+     * Checks the answers and returns the number of correct answers
+     * @returns {number} correctScore
+     * 
+     *  @author Brownhill Udeh
+     * @version 4
+     * @since 2024-03-13
+     * @updated 2024-03-18
+     */
     function checkAnswers() {
         let correctScore = 0;
 
@@ -63,6 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Form validation
+
+    /**
+     * Validates the form inputs including text fields, dropdowns, radio buttons, and checkboxes.
+     * Hides all previous error messages before validation.
+     * Displays error messages for empty required fields or unselected options.
+     * Updates the UI to indicate successful form submission if validation passes.
+     *
+     * @returns {boolean} isValid - Returns true if all validations pass, otherwise false.
+     * @author Brownhill Udeh
+     * @version 4
+     * @since 2024-03-13
+     * @updated 2024-03-18
+     */
     function validateForm() {
         let isValid = true;
 
@@ -114,7 +137,20 @@ document.addEventListener("DOMContentLoaded", () => {
         return isValid;
     }
 
-    // Function to show error message
+
+    /**
+     * Shows an error message for a given element
+     * @param {Element} element Element to which the error message should be attached
+     * @param {string} message Error message to display
+     * 
+     * @returns {void}
+     * 
+     * @author Brownhill Udeh
+     * @version 4
+     * @since 2024-03-13
+     * @updated 2024-03-18
+     *
+     */
     function showError(element, message) {
         let errorDiv = element.closest(".questionBlock, fieldset")?.querySelector(".error");
         if (errorDiv) {
